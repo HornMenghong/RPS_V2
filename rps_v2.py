@@ -26,7 +26,7 @@ while run:
         print("(A).Default,   (B).Last Player's picked, (C).Last move that win")
         behavior = input("Choose the behavior of the computer: ").lower()
     elif start == "2":
-        run = False
+        exit()
     elif start == "1":
         print("Starting the game")
 

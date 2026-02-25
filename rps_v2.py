@@ -29,10 +29,19 @@ while run:
         exit()
     elif start == "1":
         print("Starting the game")
+    else:
+        # Checking user input
+        print("Wrong Input. Please choose between 1, 2 and 3")
+        start = input("Choose what to do : ")
 
     while play:
         while(computerScore < toWin and userScore < toWin):
+            # Checking user input
             user = input("Input rock, paper, or scissors: ").lower()
+            if user not in choices:
+                print("Wrong Input!")
+                user = input("Input rock, paper, or scissors: ").lower()
+
             computer = random.choice(choices)
             # Choosing the behavior of bot
             if behavior == "b":
